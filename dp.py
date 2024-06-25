@@ -8,8 +8,15 @@ for i in range(1, n):
         f[i][j] = max(f[i][j], f[i-1][j-v[i]] + w[i])
 
 #如果将背包改成一维的, 需要注意我们缓存f[0] = 0这样导致结果出现问题
-for i in range(1, n):
+for i in range(1, n + 1):
   j = m - 1
   while j >= v[i]:
     f[j] = max(f[j], f[j - v[i]] + w[i])
     j -= 1
+
+#-----------完全背包问题cpp----------------------
+for (int i = 1; i <= n; i ++) {
+    for (int j = v[i]; j <= m; j ++ ) {
+        f[j] = max(f[j], f[j-v[i]] + w[i]);
+    }
+}
