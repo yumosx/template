@@ -6,3 +6,10 @@ for i in range(1, n):
       if j >= v[i]:
         #当可以选当前的元素的时候, 前面i-1件且体积-v[i]的值加上当前的重量
         f[i][j] = max(f[i][j], f[i-1][j-v[i]] + w[i])
+
+#如果将背包改成一维的, 需要注意我们缓存f[0] = 0这样导致结果出现问题
+for i in range(1, n):
+  j = m - 1
+  while j > v[i]:
+    f[j] = max(f[j], f[j - v[i]] + w[i])
+    j -= 1
