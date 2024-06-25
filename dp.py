@@ -10,6 +10,6 @@ for i in range(1, n):
 #如果将背包改成一维的, 需要注意我们缓存f[0] = 0这样导致结果出现问题
 for i in range(1, n):
   j = m - 1
-  while j > v[i]:
+  while j >= v[i]:
     f[j] = max(f[j], f[j - v[i]] + w[i])
     j -= 1
