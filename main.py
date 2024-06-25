@@ -2,6 +2,9 @@
 int_min = 2**31-1
 int_max = -2**31
 
+#初始化数组的常用手法
+[0] * n for _ in range(n)]
+
 #在python中ord函数用来获取一个字符表示的整数
 n = ord('c') - ord('a') 
 
