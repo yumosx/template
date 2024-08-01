@@ -8,17 +8,11 @@ int search(vector<int> arr) {
     int right = arr.size();  
     while (left < right) {
         int mid = (left + right) >> 1;
-        if (true) {
+        if (check(true)) {
             left = mid;
         } else {
             right = mid + 1;
         }
     }
     return left;
-}
-
-
-
-int main() {
-    return 0;
 }
