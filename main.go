@@ -9,3 +9,9 @@ if value, ok := hash[value - "a"]; ok {
     //条件判断
   }
 }
+delete(hash, key)
+
+//在go 语言种模拟stack
+stack := make([]int, l)
+stack = append(stack, value)
+stack = stack[:len(stack)-1]
