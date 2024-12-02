@@ -86,3 +86,6 @@ dp[i] = max(dp[j], dp[j-v[i]] + w[i])
 hash := make(map[int]int, l)
 if value, ok := hash[index]; !ok {
 }
+
+# hash的另外一种变形就是使用对应的字符-"a" 数组的形式
+hash[value - 'a'] = 12
