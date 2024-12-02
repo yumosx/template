@@ -81,3 +81,8 @@ dp[i] = max(dp[j], dp[j-v[i]]+w[i])
 
 #完全背包
 dp[i] = max(dp[j], dp[j-v[i]] + w[i])
+
+#hash 判断, 适用于go 语言
+hash := make(map[int]int, l)
+if value, ok := hash[index]; !ok {
+}
